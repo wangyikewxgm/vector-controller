@@ -9,6 +9,8 @@ COPY go.sum go.sum
 # and so that source changes don't invalidate our downloaded layer
 RUN go mod download
 
+ENV Test test
+
 # Copy the go source
 COPY main.go main.go
 COPY api/ api/
